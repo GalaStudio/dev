@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Business Website Developer | GalaStudio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Professional web developer building secure, scalable and high-impact business websites with clean design and modern technology." />
+<link rel="alternate" hreflang="en" href="https://galastudio.dev/" />
+<link rel="alternate" hreflang="x-default" href="https://galastudio.dev/" />
+
+  <style>
+    :root {
+  --primary:#1e3a8a;
+  --accent:#3b82f6;
+  --dark:#020617;
+  --light:#f8fafc;
+  --gray:#94a3b8;
+}
+
+    *{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  font-family:'Inter', system-ui, sans-serif;
+}
+
+h1, h2, h3{
+  font-family:'Playfair Display', serif;
+  letter-spacing:-0.02em;
+}
+
+    body{background:var(--light);color:var(--dark);line-height:1.6}
+ header{
+  background: linear-gradient(
+    100deg,
+    #2563eb -15%,
+    #020617 85%
+  );
+  color: #fff;
+}
+
+header::after{
+  content:"";
+  display:block;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    rgba(255,255,255,.25),
+    rgba(255,255,255,0)
+  );
+  margin-top:2rem;
+}
+
+
+    .container{max-width:1200px;margin:auto;padding:1.5rem}
+    nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:88px;
+}
+
+nav a{
+  color: rgba(255,255,255,.65); /* MUCHO más oscuro */
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a:hover{
+  color: #ffffff;
+}
+
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(59,130,246,.9),
+    transparent
+  );
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .25s ease;
+}
+
+nav a:hover::after{
+  transform:scaleX(1);
+}
+
+.hero{
+  padding: 6.5rem 1.5rem 7rem;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+    .hero h1{
+  font-size: clamp(3rem, 5vw, 4.1rem);
+  font-weight: 600;
+  line-height: 1.08;
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.03em;
+
+  /* gris metalizado tornasol */
+  background: linear-gradient(
+    120deg,
+    #e5e7eb,
+    #c7d2fe,
+    #e9d5ff,
+    #e5e7eb
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero h1{
+  animation: metalFlow 12s ease infinite;
+}
+
+@keyframes metalFlow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.hero p{
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0 auto 2.6rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .01em;
+}
+
+
+    .cta{
+  display:inline-block;
+  margin-top:1.5rem;
+  padding: 1rem 2.2rem;
+  background: linear-gradient(135deg,#3b82f6,#1e40af);
+  color: white;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 18px 40px rgba(59,130,246,.28);
+  transition: all .25s ease;
+}
+
+.cta:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 24px 60px rgba(59,130,246,.35);
+}
+
+
+ section{
+  padding: 5.5rem 1.5rem;
+}
+
+
+    h2{
+  text-align: center;
+  margin-bottom: 3.2rem;
+  color: var(--primary);
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-bottom: 2.5rem;
+}
+    .card{
+  background: #ffffff;
+  padding: 2.2rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(2,6,23,.08);
+  box-shadow: 0 10px 30px rgba(2,6,23,.05);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px rgba(2,6,23,.12);
+}
+.card h3{
+  font-size: 1.25rem;
+  margin-bottom: .6rem;
+  font-weight: 600;
+}
+
+
+    .card button{margin-top:1rem;background:none;border:none;color:var(--primary);font-weight:700;cursor:pointer}
+ footer{
+  background: linear-gradient(
+    to bottom,
+    #0b1220,
+    #020617
+  );
+  color: #cbd5f5;
+  padding: 2.8rem 1.5rem 2.4rem;
+  font-size: .95rem;
+}
+
+footer strong{
+  color: #e5e7eb;
+}
+
+footer a{
+  color: #94a3b8;
+  text-decoration: none;
+  display: block;
+  margin-top: .4rem;
+}
+
+footer a:hover{
+  color: #e5e7eb;
+}
+
+footer .container{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* GRID — DESKTOP (NO TOCAR) */
+footer .grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 0;
+}
+
+/* TEXTO CENTRADO */
+footer .grid > div{
+  text-align: center;
+}
+
+/* POSICIÓN DESKTOP */
+footer .grid > div:nth-child(1){
+  justify-self: start;
+}
+
+footer .grid > div:nth-child(2){
+  justify-self: center;
+}
+
+footer .grid > div:nth-child(3){
+  justify-self: end;
+}
+
+/* ===================== */
+/* MOBILE — SOLO ORDENAR */
+/* ===================== */
+@media (max-width: 768px){
+  footer .grid{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  footer .grid > div{
+    justify-self: center;
+    text-align: center;
+  }
+
+  /* 🔑 RESET CLAVE */
+  footer .grid > div:nth-child(1),
+  footer .grid > div:nth-child(2),
+  footer .grid > div:nth-child(3){
+    justify-self: center;
+  }
+}
+
+    /* modal */
+    .modal{
+  position:fixed;
+  inset:0;
+  background: rgba(2,6,23,.75);
+  backdrop-filter: blur(10px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+  opacity:0;
+  transition:opacity .3s ease;
+  z-index: 1000;
+}
+
+    .modal.show{opacity:1}
+    .modal-content{
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #1e293b,
+    #020617
+  );
+  background-size: 300% 300%;
+  animation: metalShift 18s ease infinite;
+
+  max-width: 760px;
+  width: 100%;
+  border-radius: 26px;
+  padding: 1.8rem 3rem 3rem;
+  position: relative;
+
+  box-shadow:
+    0 60px 160px rgba(2,6,23,.8),
+    inset 0 0 0 1px rgba(148,163,184,.15);
+
+  transform: translateY(24px) scale(.96);
+  opacity: 0;
+  transition: all .45s cubic-bezier(.2,.8,.2,1);
+  overflow: hidden;
+}
+@keyframes metalShift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.modal-content h2{
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: .8rem;
+  color: #e5e7eb;
+}
+.modal-subtitle{
+  font-size: .95rem;
+  color: #475569;
+  max-width: 520px;
+}
+
+.modal-content p{
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,.82);
+  margin-bottom: 1.2rem;
+}
+
+    .modal.show .modal-content{transform:scale(1) translateY(0);opacity:1}
+   .modal-close{
+  position:absolute;
+  top:1.6rem;
+  right:1.6rem;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background: rgba(255,255,255,.08);
+  color: #e5e7eb;
+  border:none;
+  font-size:1.3rem;
+  cursor:pointer;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.modal-close:hover{
+  background: rgba(255,255,255,.18);
+  transform: scale(1.08);
+}
+
+
+.logo{
+  display:flex;
+  align-items:center;
+}
+
+.logo img{
+  height:72px;
+  width:auto;
+  display:block;
+}
+/* HERO signature entrance */
+.hero h1,
+.hero p,
+.hero .cta{
+  opacity: 0;
+  transform: translateY(12px);
+  animation: heroReveal 0.9s ease-out forwards;
+}
+
+.hero p{ animation-delay: .12s; }
+.hero .cta{ animation-delay: .22s; }
+
+@keyframes heroReveal{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero::after{
+  content:"";
+  display:block;
+  width:80px;
+  height:2px;
+  margin:3.5rem auto 0;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(59,130,246,.8),
+    transparent
+  );
+}
+/* Modal spacing premium */
+.modal-content > * + *{
+  margin-top: 1.4rem;
+}
+.modal-content h2{
+  margin-top: 0 !important;
+}
+
+
+.modal-content ul,
+.modal-content ol{
+  padding-left: 1.4rem;
+}
+
+.modal-content li{
+  margin-bottom: .8rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,.8);
+}
+
+.modal-content strong{
+  color: #0f172a;
+  font-weight: 600;
+}
+.modal-content::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(59,130,246,.08),
+    transparent
+  );
+}
+.modal-content{
+  overflow: hidden; /* importante */
+}
+
+.modal-header{
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(15,23,42,.08);
+  position: relative;
+}
+
+.modal-header::before{
+  content:"";
+  position:absolute;
+  inset:-3rem -3rem auto -3rem;
+  height:140px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(59,130,246,.25),
+    rgba(139,92,246,.18),
+    transparent 70%
+  );
+  z-index:-1;
+}
+.modal-content section{
+  margin-top: 2.2rem;
+}
+
+.modal-content section h3{
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: .6rem;
+  color: #0f172a;
+}
+
+.modal-content section p{
+  margin-bottom: .8rem;
+}
+/* Card oscura SOLO dentro del modal Projects */
+#projects .card{
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #1e293b
+  );
+  color: rgba(255,255,255,.85);
+  border: 1px solid rgba(148,163,184,.18);
+  box-shadow:
+    0 30px 80px rgba(2,6,23,.8),
+    inset 0 0 0 1px rgba(255,255,255,.05);
+}
+#projects .card h3{
+  color: #e5e7eb;
+}
+
+#projects .card p{
+  color: rgba(255,255,255,.8);
+}
+/* Fix textos strong SOLO en Projects */
+#projects .card strong{
+  color: #93c5fd;
+  font-weight: 600;
+}
+/* Fix strong SOLO en How we work */
+#how strong{
+  color: #93c5fd;
+  font-weight: 600;
+}
+/* Inputs bonitos SOLO en Contact */
+#contact input,
+#contact textarea{
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #0f172a
+  );
+  border: 1px solid rgba(148,163,184,.25);
+  color: #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+}
+
+/* Placeholder (texto gris dentro) */
+#contact input::placeholder,
+#contact textarea::placeholder{
+  color: rgba(255,255,255,.45);
+}
+
+/* Al hacer click */
+#contact input:focus,
+#contact textarea:focus{
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 1px rgba(96,165,250,.6);
+}
+/* Letras claras SOLO en Contact */
+#contact label{
+  color: rgba(255,255,255,.85);
+  font-weight: 500;
+}
+/* Correo visible SOLO en Contact */
+#contact strong{
+  color: #e5e7eb;
+  font-weight: 600;
+}
+/* Links de contacto (email / whatsapp) */
+.contact-link{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: #93c5fd;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-link:hover{
+  text-decoration: underline;
+}
+/* Floating WhatsApp & Email */
+.floating-contact{
+  position: fixed;
+  bottom: 1.6rem;
+  right: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  z-index: 2000;
+}
+
+.floating-contact a{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #0f172a
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 20px 50px rgba(2,6,23,.8),
+    inset 0 0 0 1px rgba(148,163,184,.2);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.floating-contact a:hover{
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:
+    0 30px 70px rgba(2,6,23,.9),
+    inset 0 0 0 1px rgba(96,165,250,.6);
+}
+
+.floating-contact img{
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+}
+
+.project-demo{
+  margin: 0 auto;
+  max-width: 1040px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3.2rem;
+  align-items: center;
+
+  padding: 2rem;
+  border-radius: 28px;
+
+  background: linear-gradient(
+    to bottom,
+    #0f172a,
+    #020617
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(148,163,184,.18),
+    0 60px 160px rgba(2,6,23,.9);
+}
+
+
+
+.project-text strong{
+  font-size: .75rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+}
+.project-text p{
+  color: #e5e7eb;
+}
+
+
+.project-demo video{
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.7),
+    0 0 0 1px rgba(148,163,184,.25);
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px){
+  .project-demo{
+    grid-template-columns: 1fr;
+  }
+}
+.section-divider{
+  margin: 3.5rem auto 2.5rem;
+  max-width: 920px;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.section-divider::before,
+.section-divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(148,163,184,.6),
+    transparent
+  );
+}
+
+.section-divider span{
+  font-size: .7rem;
+  letter-spacing: .28em;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+
+.featured-wrapper{
+  margin-top: 0;   /* MUERTA LA LÍNEA */
+  padding: 3rem 1.5rem 3.5rem;
+  background:
+    radial-gradient(
+      1200px 500px at 50% 0%,
+      rgba(96,165,250,.22),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #020617,
+      #030712
+    );
+}
+
+.featured-wrapper .section-divider span{
+  color: #c7d2fe;
+}
+
+.featured-wrapper .section-divider::before,
+.featured-wrapper .section-divider::after{
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(165,180,252,.6),
+    transparent
+  );
+}
+
+.services-section{
+  padding-top: 3rem;     /* ← AQUÍ ESTABA EL BLOQUEO */
+  padding-bottom: 1.5rem;
+}
+
+.featured-intro{
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.featured-intro h2{
+  color: #e5e7eb;
+  font-size: 2.4rem;
+}
+.about-visible,
+.services-visible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 768px){
+  nav{
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo img{
+    height: 56px;
+  }
+
+  nav > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+  }
+
+  nav a{
+    margin-left: 0;
+    font-size: .85rem;
+  }
+}
+@media (max-width: 768px){
+  .hero{
+    padding: 4.2rem 1.2rem 4.8rem;
+  }
+
+  .hero h1{
+    font-size: 2.4rem;
+  }
+
+  .hero p{
+    font-size: .95rem;
+  }
+}
+
+
+
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://galastudio.dev/#organization",
+      "name": "GalaStudio",
+      "url": "https://galastudio.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://galastudio.dev/logo-gs.png"
+      },
+      "description": "GalaStudio is a web development studio specialized in high-performance websites, modern web applications, and scalable digital solutions.",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://galastudio.dev/#website",
+      "url": "https://galastudio.dev/",
+      "name": "GalaStudio",
+      "publisher": {
+        "@id": "https://galastudio.dev/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://galastudio.dev/#webpage",
+      "url": "https://galastudio.dev/",
+      "name": "Business Website Developer | GalaStudio",
+      "isPartOf": {
+        "@id": "https://galastudio.dev/#website"
+      },
+      "about": {
+        "@id": "https://galastudio.dev/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://galastudio.dev/#service",
+      "serviceType": "Business Website Development",
+      "provider": {
+        "@id": "https://galastudio.dev/#organization"
+      },
+      "areaServed": "Worldwide",
+      "description": "Professional web development services including frontend development, backend development, full-stack applications, and custom web solutions."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://galastudio.dev/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://galastudio.dev/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+  <img src="logo-gs.png" alt="GalaStudio logo">
+</div>
+
+
+      <div>
+        <a href="#" onclick="openModal('about')">About</a>
+        <a href="#" onclick="openModal('services')">Services</a>
+        <a href="#" onclick="openModal('how')">How we work</a>
+        <a href="#" onclick="openModal('projects')">Projects</a>
+        <a href="#" onclick="openModal('api')">API</a>
+        <a href="#" onclick="openModal('security')">Security</a>
+        <a href="#" onclick="openModal('contact')">Contact</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <h1 data-hero-title>Business Website Developer for Modern Companies</h1>
+      <p data-hero-text>
+GalaStudio is a business website developer helping modern companies build fast, secure and conversion-focused websites that attract clients and scale their business.
+</p>
+      <a class="cta" data-cta href="#" onclick="openModal('contact')">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section class="about-visible">
+  <h2>About GalaStudio</h2>
+  <p>
+    GalaStudio is a professional web development studio focused on building
+    secure, scalable and high-impact business websites for modern companies.
+    We combine clean design, performance and modern technologies to create
+    digital experiences that build trust and convert users.
+  </p>
+</section>
+
+<section class="services-visible">
+  <h2>Web Development Services</h2>
+  <p>
+    Professional web development services including business websites,
+    landing pages, corporate sites and custom web solutions built for
+    performance, security and scalability.
+  </p>
+</section>
+
+<section class="services-section">
+  <h2 data-offer>What We Deliver</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Frontend Engineering</h3>
+      <p>
+        High-end, accessible and performance-optimized interfaces
+        built with clean code and modern standards.
+      </p>
+      <button onclick="openModal('frontend')">View details</button>
+    </div>
+
+    <div class="card">
+      <h3>Business Websites</h3>
+      <p>
+        Strategic websites designed to build trust,
+        communicate value and convert visitors into clients.
+      </p>
+      <button onclick="openModal('business')">View details</button>
+    </div>
+
+    <div class="card">
+      <h3>Support & Maintenance</h3>
+      <p>
+        Ongoing technical support, updates and improvements
+        to keep your website secure, fast and reliable.
+      </p>
+      <button onclick="openModal('support')">View details</button>
+    </div>
+  </div>
+</section>
+
+<div class="featured-wrapper">
+
+  <div class="featured-intro">
+    <h2>Selected Work</h2>
+  </div>
+
+  <div class="section-divider">
+    <span>Featured project</span>
+  </div>
+
+  <div class="project-demo">
+    <div class="project-text">
+      <strong>Restaurant Website Demo</strong>
+      <p>
+        Restaurant website demo showcasing a clean UI,
+        responsive layout and intuitive navigation.
+      </p>
+    </div>
+
+    <video
+      src="videos/restaurant-demo.mp4"
+      controls
+      playsinline
+      preload="metadata">
+    </video>
+  </div>
+</div>
+
+<footer>
+
+ <div class="container grid">
+  <div>
+    <strong>Company</strong>
+    <a href="#" onclick="openModal('about')">About</a>
+    <a href="#" onclick="openModal('security')">Security</a>
+  </div>
+
+  <div>
+    <strong>Support</strong>
+    <a href="#" onclick="openModal('contact')">Contact</a>
+    <a href="#" onclick="openModal('support')">Email support</a>
+  </div>
+
+  <div>
+  <strong>Legal</strong>
+  <a href="#" onclick="openModal('privacy')">Privacy Policy</a>
+  <a href="#" onclick="openModal('terms')">Terms of Service</a>
+</div>
+
+</footer>
+
+<!-- MODALS -->
+
+<div class="modal" id="support">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Email Support</h2>
+
+    <p>
+      Our support team is available to help you with technical issues,
+      maintenance requests or general inquiries.
+    </p>
+
+    <p>
+      Typical response time is within 24 hours on business days.
+    </p>
+
+    <p>
+      <a href="mailto:info.galastudio.web@gmail.com" class="contact-link">
+        ✉️ info.galastudio.web@gmail.com
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="privacy">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Privacy Policy</h2>
+
+    <p>
+      GalaStudio respects your privacy and is committed to protecting
+      your personal information.
+    </p>
+
+    <p>
+      We only collect data necessary to provide our services and
+      never share your information with third parties without consent.
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="terms">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Terms of Service</h2>
+
+    <p>
+      By using GalaStudio services, you agree to comply with our terms
+      and conditions.
+    </p>
+
+    <p>
+      Services are provided as-is, and usage implies acceptance of
+      our policies regarding responsibility and usage.
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="frontend">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Frontend Engineering</h2>
+
+    <p>
+      We design and build high-quality user interfaces
+      focused on performance, accessibility and scalability.
+    </p>
+
+    <ul>
+      <li>Clean and maintainable code</li>
+      <li>Mobile-first & responsive layouts</li>
+      <li>Performance and UX optimization</li>
+    </ul>
+  </div>
+</div>
+<div class="modal" id="business">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Business Websites</h2>
+
+    <p>
+      We create strategic business websites designed
+      to communicate trust and convert visitors into clients.
+    </p>
+
+    <ul>
+      <li>Clear information architecture</li>
+      <li>Professional brand presence</li>
+      <li>Conversion-focused structure</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal" id="projects">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3>Restaurant Website Demo</h3>
+
+      <p>
+        <strong>Objective:</strong>
+        Create a modern, responsive restaurant website focused on clarity and user experience.
+      </p>
+
+      <p>
+        <strong>Solution:</strong>
+        Clean layout, mobile-first design and intuitive navigation.
+      </p>
+
+      <p>
+        <strong>Tech stack:</strong>
+        HTML, CSS, JavaScript
+      </p>
+
+      <p>
+        <a href="https://galastudio.github.io/demo-restaurant/" target="_blank">Live Demo</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="about">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>About GalaStudio</h2>
+
+    <p>
+      GalaStudio is a digital studio focused on designing and developing
+      high-quality web experiences for modern, international companies.
+    </p>
+
+    <p>
+      We combine strategy, design and engineering to build secure, scalable
+      and visually refined products that inspire trust and long-term growth.
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="how">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>How we work</h2>
+
+    <ol>
+      <li><strong>Discovery</strong> – We understand your goals, users and business needs.</li>
+      <li><strong>Planning</strong> – We define structure, scope and technical approach.</li>
+      <li><strong>Design</strong> – Clean, modern and user-focused interface design.</li>
+      <li><strong>Development</strong> – High-quality frontend development with best practices.</li>
+      <li><strong>Testing & Launch</strong> – Cross-browser testing and smooth deployment.</li>
+      <li><strong>Support</strong> – Ongoing support, improvements and maintenance.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="modal" id="services">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Services</h2>
+
+    <ul>
+      <li>Frontend Engineering (HTML, CSS, JavaScript)</li>
+      <li>Corporate & Business Websites</li>
+      <li>Landing Pages focused on conversion</li>
+      <li>Website Optimization & Performance</li>
+      <li>Maintenance, Support & Improvements</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal" id="api">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>API & Integration Guide</h2>
+
+    <p>
+      GalaStudio follows structured integration standards.
+      API documentation, data flows and technical guides are provided
+      for each project when required.
+    </p>
+
+    <ul>
+      <li>Clear documentation</li>
+      <li>Secure data handling</li>
+      <li>Scalable integration patterns</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal" id="security">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Security Standards</h2>
+
+    <p>Security is a core principle at GalaStudio.</p>
+
+    <ul>
+      <li>HTTPS & SSL configuration</li>
+      <li>Secure coding practices</li>
+      <li>Input validation & protection</li>
+      <li>Performance and stability monitoring</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal" id="contact">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+
+    <h2>Contact GalaStudio</h2>
+
+    <p>
+      You can reach us via WhatsApp or email,
+      or send a message using the form below.
+    </p>
+
+    <form id="contactForm" style="margin-top:1.5rem">
+      <label>
+        Name<br>
+        <input type="text" required style="width:100%;padding:.6rem;margin:.4rem 0">
+      </label>
+
+      <label>
+        Email<br>
+        <input type="email" required style="width:100%;padding:.6rem;margin:.4rem 0">
+      </label>
+
+      <label>
+        Message<br>
+        <textarea required style="width:100%;padding:.6rem;margin:.4rem 0"></textarea>
+      </label>
+
+      <button
+        type="submit"
+        style="margin-top:1rem;padding:.7rem 1.4rem;background:#2563eb;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer"
+      >
+        Send message
+      </button>
+    </form>
+
+<p style="margin-top:1.2rem">
+  <a href="mailto:info.galastudio.web@gmail.com" class="contact-link">
+    ✉️ info.galastudio.web@gmail.com
+  </a>
+</p>
+
+
+    <p>
+  <a href="https://wa.me/573112559105" target="_blank" class="contact-link">
+    🟢 WhatsApp +57 311 255 9105
+  </a>
+</p>
+
+  </div>
+</div>
+
+<script>
+
+
+function openModal(id){const m=document.getElementById(id);m.style.display='flex';requestAnimationFrame(()=>m.classList.add('show'))}
+function closeModal(){document.querySelectorAll('.modal').forEach(m=>{m.classList.remove('show');setTimeout(()=>m.style.display='none',250)})}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const sb = window.supabase.createClient(
+    'https://httcnomdnpnscbdqrsgo.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh0dGNub21kbnBuc2NiZHFyc2dvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5MTA5MTcsImV4cCI6MjA4MzQ4NjkxN30.fZkYd_acbzGmwQV_XDxb1NjLvhJfUMTg3hJo8Niry6M'
+  );
+
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: form.querySelector('input[type="text"]').value,
+      email: form.querySelector('input[type="email"]').value,
+      message: form.querySelector('textarea').value,
+      language: localStorage.getItem('lang') || 'en'
+    };
+
+    const { error } = await sb.from('leads').insert(data);
+
+    if (error) {
+      alert('Error sending message');
+      console.error(error);
+    } else {
+      alert('Message sent successfully');
+      form.reset();
+      closeModal();
+    }
+  });
+</script>
+<!-- Floating contact icons -->
+<div class="floating-contact">
+  <a href="https://wa.me/573112559105" target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp">
+  </a>
+
+  <a href="mailto:info.galastudio.web@gmail.com" aria-label="Email">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email">
+  </a>
+</div>
+
+<nav aria-label="Primary" style="display:none;">
+  <ul>
+    <li><a href="/services/business-website-developer.html">Business Website Developer</a></li>
+    <li><a href="/services/web-development.html">Web Development Services</a></li>
+    <li><a href="/services/frontend-development.html">Frontend Development Services</a></li>
+    <li><a href="/services/backend-development.html">Backend Development Services</a></li>
+    <li><a href="/services/fullstack-development.html">Full-Stack Web Development Services</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>
